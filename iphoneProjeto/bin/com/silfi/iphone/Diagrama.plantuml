@@ -1,0 +1,80 @@
+@startuml Diagrama
+interface AparelhoTelefonico {
+    fazerChamada(numero: String)
+    receberChamada(numero: String)
+    finalizarChamada()
+}
+
+interface NavegadorInternet {
+    navegar(url: String)
+    atualizarPagina()
+    adicionarAosFavoritos(url: String)
+}
+
+interface ReprodutorMusical {
+    tocarMusica()
+    pausarMusica()
+    pararMusica()
+}
+
+class iPhone {
+    - modelo: String
+    - numeroSerie: String
+
+    + iPhone(modelo: String, numeroSerie: String)
+    + tocarMusica()
+    + pausarMusica()
+    + pararMusica()
+    + fazerChamada(numero: String)
+    + receberChamada(numero: String)
+    + finalizarChamada()
+    + navegar(url: String)
+    + atualizarPagina()
+    + adicionarAosFavoritos(url: String)
+}
+
+iPhone --|> ReprodutorMusical
+iPhone --|> AparelhoTelefonico
+iPhone --|> NavegadorInternet
+
+@enduml
+
+interface AparelhoTelefonico {
+    fazerChamada(numero: String)
+    receberChamada(numero: String)
+    finalizarChamada()
+}
+
+interface NavegadorInternet {
+    navegar(url: String)
+    atualizarPagina()
+    adicionarAosFavoritos(url: String)
+}
+
+interface ReprodutorMusical {
+    tocarMusica()
+    pausarMusica()
+    pararMusica()
+}
+
+class iPhone {
+    - modelo: String
+    - numeroSerie: String
+
+    + iPhone(modelo: String, numeroSerie: String)
+    + tocarMusica()
+    + pausarMusica()
+    + pararMusica()
+    + fazerChamada(numero: String)
+    + receberChamada(numero: String)
+    + finalizarChamada()
+    + navegar(url: String)
+    + atualizarPagina()
+    + adicionarAosFavoritos(url: String)
+}
+
+iPhone --|> ReprodutorMusical
+iPhone --|> AparelhoTelefonico
+iPhone --|> NavegadorInternet
+
+@enduml
